@@ -9,7 +9,7 @@
 ## V1.1 -> Interface Counter and Parser Only
 
 - For this project, I started studying and learning essential tools I can use in relation to my original Network Project. The console asks for 2 options, starting with Interface Counter by simply being able to read txt files containing copy-pasted manual configurations on each device. For instance, the running-configuration of SW1-LAB1 contents are read using file.read and return and displays line by line. 
--On the other hand, the parsing.
+- On the other hand, the parsing.
 
 ---
 
