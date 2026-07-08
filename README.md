@@ -1,8 +1,8 @@
 # NetworkAnalyzerProject-CPT-Certificataion-TrainingCenter-Lab
--This is continuation and more projects related to my CPT-Certification/TrainingCenter-Lab Network Project. I plan to add more projects that can  be tools and my original network lab will serve as the foundation to use tools and projects I plan to create in the future.
--This project was created to improve my Python programming skills while applying networking concepts learned through Cisco Packet Tracer and Cisco IOS configuration.
--As someone interested in networking and cybersecurity, I wanted to build a project that combines Python programming with Cisco networking concepts.
--Rather than creating another beginner Python project, I wanted something that solves networking problems, even if it means starting from the simplest and easiest tasks.
+- This is continuation and more projects related to my CPT-Certification/TrainingCenter-Lab Network Project. I plan to add more projects that can  be tools and my original network lab will serve as the foundation to use tools and projects I plan to create in the future.
+- This project was created to improve my Python programming skills while applying networking concepts learned through Cisco Packet Tracer and Cisco IOS configuration.
+- As someone interested in networking and cybersecurity, I wanted to build a project that combines Python programming with Cisco networking concepts.
+- Rather than creating another beginner Python project, I wanted something that solves networking problems, even if it means starting from the simplest and easiest tasks.
 
 This project also serves as a practical way to strengthen my understanding of 
 | Python | OOP | Configuration parsing | Network automation | Cisco IOS | Auditing (hopefully) |
@@ -10,12 +10,12 @@ This project also serves as a practical way to strengthen my understanding of
 
 ## V1.1 -> Interface Counter and Parser Only
 
--For this project, I started studying and learning essential tools I can use in relation to my original Network Project. The console asks for 2 options, starting with Interface Counter by simply being able to read txt files containing copy-pasted manual configurations on each device. For instance, the running-configuration of SW1-LAB1 contents are read using file.read and return and displays line by line. 
+- For this project, I started studying and learning essential tools I can use in relation to my original Network Project. The console asks for 2 options, starting with Interface Counter by simply being able to read txt files containing copy-pasted manual configurations on each device. For instance, the running-configuration of SW1-LAB1 contents are read using file.read and return and displays line by line. 
 -On the other hand, the parsing.
 
 ---
 
-### Current Features (v0.1)
+### Current Features (V1.1)
 
 - Read Cisco IOS configuration files (.txt)
 - Parse device hostname
