@@ -1,0 +1,69 @@
+ciscoasa#show run
+ASA Version 8.4(2)
+!
+hostname ciscoasa
+names
+!
+interface Ethernet0/0
+ switchport access vlan 2
+!
+interface Ethernet0/1
+!
+interface Ethernet0/2
+ switchport access vlan 2
+!
+interface Ethernet0/3
+!
+interface Ethernet0/4
+!
+interface Ethernet0/5
+!
+interface Ethernet0/6
+!
+interface Ethernet0/7
+!
+interface Vlan1
+ nameif inside
+ security-level 100
+ ip address 10.0.0.2 255.255.255.248
+!
+interface Vlan2
+ nameif outside
+ security-level 0
+ ip address 172.16.0.1 255.255.255.248
+!
+!
+route inside 192.168.10.0 255.255.255.0 10.0.0.1 1
+route inside 192.168.20.0 255.255.255.0 10.0.0.1 1
+route inside 192.168.25.0 255.255.255.0 10.0.0.1 1
+route inside 192.168.90.0 255.255.255.224 10.0.0.1 1
+route outside 0.0.0.0 0.0.0.0 172.16.0.4 1
+!
+access-list INSIDE_OUT extended permit ip any any
+access-list OUTSIDE_IN extended permit ip any any
+!
+!
+access-group INSIDE_OUT in interface inside
+access-group OUTSIDE_IN in interface outside
+!
+!
+class-map inspection_default
+ match default-inspection-traffic
+!
+policy-map global_policy
+ class inspection_default
+  inspect icmp 
+!
+service-policy global_policy global
+!
+telnet timeout 5
+ssh timeout 5
+!
+dhcpd auto_config outside
+!
+!
+dhcpd enable inside
+!
+!
+!
+!
