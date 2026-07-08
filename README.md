@@ -3,9 +3,8 @@
 - This project was created to improve my Python programming skills while applying networking concepts learned through Cisco Packet Tracer and Cisco IOS configuration.
 - As someone interested in networking and cybersecurity, I wanted to build a project that combines Python programming with Cisco networking concepts.
 - Rather than creating another beginner Python project, I wanted something that solves networking problems, even if it means starting from the simplest and easiest tasks.
-
-This project also serves as a practical way to strengthen my understanding of 
-| Python | OOP | Configuration parsing | Network automation | Cisco IOS | Auditing (hopefully) |
+- This project also serves as a practical way to strengthen my understanding of | Python | OOP | Configuration parsing | Network automation | Cisco IOS | Auditing (hopefully) |
+- 
 ---
 
 ## V1.1 -> Interface Counter and Parser Only
