@@ -1,0 +1,127 @@
+SW1-LAB1#sohw run
+              ^
+% Invalid input detected at '^' marker.
+	
+SW1-LAB1#show run
+Building configuration...
+
+Current configuration : 1828 bytes
+!
+version 15.0
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname SW1-LAB1
+!
+enable secret 5 $1$mERr$vTbHul1N28cEp8lkLqr0f/
+!
+!
+!
+ip domain-name SW1-LAB1
+!
+username SW1-LAB1 secret 5 $1$mERr$1zlSibD5yKqb6outrPElt1
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ switchport access vlan 10
+ switchport mode access
+!
+interface FastEthernet0/2
+ switchport trunk native vlan 100
+ switchport trunk allowed vlan 10,100
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface FastEthernet0/3
+ switchport trunk native vlan 100
+ switchport trunk allowed vlan 10,100
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+!
+interface FastEthernet0/24
+!
+interface GigabitEthernet0/1
+!
+interface GigabitEthernet0/2
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ no ip address
+ shutdown
+!
+interface Vlan99
+ ip address 192.168.99.3 255.255.255.0
+!
+ip default-gateway 192.168.99.1
+!
+banner motd ^Cnauthorized Access is Prohibited! Restricted to 2-5 Admins.
+
+^C
+!
+!
+!
+line con 0
+ password admin
+ login
+!
+line vty 0 4
+ password admin
+ login local
+ transport input ssh
+line vty 5 15
+ password admin
+ login
+ transport input telnet
+!
+!
+!
+!
+end
